@@ -1,0 +1,13 @@
+- Como vou fazer os filtros
+- Como vou fazer para subir a possivel API que terei que fazer
+- Estudar se tem como fazer isso apenas com o JS, para nao ter custo a mais para ter que subir uma API
+- Como vou fazer para os aptos ir "automaticamente" (mais pra frente)
+- paleta de cores(acho que está muito agressivo)
+- colocar parte para aptos que esta anunciado para vendas ou aluguel não "Destaques" ate pq não faz sentido
+- Form de contato
+- Cria Base para quando o cliente clicar em "Ver detalhes", para entrar em contato com o vendedor
+- ver de colocar imoveis similares(mais pra frente)
+- colocar botão de copiar o link p/ compartilhamento
+- favoritos ( bem mais pra frente)
+- na home colocar localização da "imobiliaria", caso tenha algum endereço
+- criar as politicas e termos de uso

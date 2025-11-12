@@ -4,25 +4,28 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<title>Castilho Imóveis</title>
-		<link rel="stylesheet" href="styles.css">
+		<link rel="stylesheet" href="styles/home.css">
+		<link rel="stylesheet" href="styles/global.css">
+		<link rel="stylesheet" href="styles/mobile.css">
 		<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 	</head>
 	<body>
 		<header class="site-header">
 			<div class="container header-inner">
 				<div class="brand">
-					<span class="logo-mark">CI</span>
+					<img src="imgs/Logo.jpeg" alt="">
 					<div class="brand-text">
 						<strong>Castilho</strong>
 						<span>Imóveis</span>
 					</div>
 				</div>
-				<nav class="nav">
+				<nav class="nav" id="navMenu">
 					<a href="#">Início</a>
-					<a href="#imoveis">Imóveis</a>
-					<a href="#sobre">Sobre</a>
-					<a href="#contato" class="btn-outline">Contato</a>
+					<a href="imoveis.html">Imóveis</a>
+					<a href="sobre.html">Sobre</a>
+					<a href="#" class="btn-outline">Contato</a>
 				</nav>
+				<button class="menu-toggle" id="menuToggle">☰</button>
 			</div>
 		</header>
 
@@ -46,6 +49,11 @@
 								<option value="sv">São Vicente/SP</option>
 							</select>
 						</label>
+						<label>Finalidade
+							<select name="finalidade" id="finalidade">
+								<option value="compra">Comprar</option>
+								<option value="aluguel">Alugar</option>
+							</select>
 						<label>Tipo
 							<select name="tipo" id="tipo">
 								<option value="tds">Todos</option>
@@ -71,17 +79,35 @@
 				<h2>Imóveis em destaque</h2>
 				<div class="grid">
 					<article class="card">
-						<div class="card-image">Imagem</div>
+						<div class="card-image carousel" data-carousel>
+							<div class="carousel-images">
+								<img src="imgs/aptos/apto01/19.jpeg" alt="">
+								<img src="imgs/aptos/apto01/13.jpeg" alt="">
+								<img src="imgs/aptos/apto01/10.jpeg" alt="">
+								<img src="imgs/aptos/apto01/32.jpeg" alt="">
+							</div>
+							<button class="prev">&#10094;</button>
+							<button class="next">&#10095;</button>
+							</div>
 						<div class="card-body">
-							<h3>Casa espaçosa no bairro nobre</h3>
-							<p class="price">R$ 1.250.000</p>
-							<p class="meta">4 quartos • 3 banheiros • 320 m²</p>
+							<h3></h3>
+							<p class="price">R$ 490.000,00</p>
+							<p class="meta">1 suíte • 1 quarto • 2 banheiros • 1 vaga de garagem • 63 m²</p>
 							<a class="btn btn-sm" href="#">Ver detalhes</a>
 						</div>
 					</article>
 
 					<article class="card">
-						<div class="card-image">Imagem</div>
+						<div class="card-image carousel" data-carousel>
+							<div class="carousel-images">
+								<img src="imgs/aptos/apto01/19.jpeg" alt="">
+								<img src="imgs/aptos/apto01/13.jpeg" alt="">
+								<img src="imgs/aptos/apto01/10.jpeg" alt="">
+								<img src="imgs/aptos/apto01/32.jpeg" alt="">
+							</div>
+							<button class="prev">&#10094;</button>
+							<button class="next">&#10095;</button>
+							</div>
 						<div class="card-body">
 							<h3>teste 01</h3>
 							<p class="price">R$ 780.000</p>
@@ -89,22 +115,12 @@
 							<a class="btn btn-sm" href="#">Ver detalhes</a>
 						</div>
 					</article>
-
-					<article class="card">
-						<div class="card-image">Imagem</div>
-						<div class="card-body">
-							<h3>Teste 02</h3>
-							<p class="price">R$ 2.500.000</p>
-							<p class="meta">1.200 m² • Zoneamento comercial</p>
-							<a class="btn btn-sm" href="#">Ver detalhes</a>
-						</div>
-					</article>
+					
+					
 				</div>
-			</section>
-
-			<section id="sobre" class="about container">
-				<h2>Sobre a Castilho Imóveis</h2>
-				<p>Com anos de experiência no mercado imobiliário, oferecemos atendimento dedicado para compradores, vendedores e locatários. Nossa equipe prioriza transparência e segurança em cada negociação.</p>
+				<div class="ver-todos-container">
+						<a class="btn btn-sm-mid" href="#">Ver Todos</a>
+					</div>
 			</section>
 		</main>
 
@@ -113,6 +129,8 @@
 				<div>
 					<strong>Castilho Imóveis</strong>
 					<p>(11) 93768-5205 • castilhoImoveis@gmail.com</p>
+			
+					<p> 2025 castilhoImoveis • Todos os direitos reservados. CRECI 272411 </p>
 				</div>
 				<div class="footer-links">
 					<a href="#">Política de Privacidade</a>
@@ -121,5 +139,7 @@
 			</div>
 		</footer>
 
+
+		<script src="script.js"></script>
 	</body>
 </html>

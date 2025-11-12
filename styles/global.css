@@ -1,0 +1,73 @@
+
+:root {
+  --bg: #000000;
+  --panel: #0b0b0b;
+  --gold: #D4AF37;
+  --gold-dark: #B2862A;
+  --muted: #cfc7b2;
+  --accent-weak: rgba(212, 175, 55, 0.08);
+}
+/* ===== Reset & Base ===== */
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+  background: var(--bg);
+  color: var(--muted);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+
+/* Header */
+.site-header{
+  background:linear-gradient(0deg, rgba(0,0,0,0.45), rgba(0,0,0,0.25));
+  border-bottom:1px solid rgba(212,175,55,0.08);
+  position:sticky;
+  top:0;
+  z-index:40;
+}
+.brand img {
+  width: 48px; /* ajusta o tamanho da logo */
+  height: 48px;
+  object-fit: cover; /* evita distorção */
+  border-radius: 8px; /* opcional — combina com o estilo da .logo-mark */
+}
+.header-inner{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:18px 0;
+}
+.brand{display:flex;align-items:center;gap:12px}
+.logo-mark{
+  display:inline-grid;place-items:center;
+  width:48px;height:48px;border-radius:8px;
+  background:linear-gradient(135deg,var(--gold),var(--gold-dark));
+  color:#000;font-weight:700;
+}
+.brand-text strong{display:block;color:var(--gold);line-height:1}
+.brand-text span{font-size:12px;color:var(--muted);display:block;margin-top:2px}
+
+.nav a{color:var(--muted);text-decoration:none;margin-left:18px}
+.nav a.btn-outline{padding:8px 12px;border:1px solid rgba(212,175,55,0.15);border-radius:6px;color:var(--gold)}
+
+
+/* Footer */
+.site-footer{border-top:1px solid rgba(212,175,55,0.04);padding:20px 0;margin-top:36px}
+.footer-inner{display:flex;justify-content:space-between;align-items:center}
+.footer-links a{color:var(--muted);margin-left:14px}
+
