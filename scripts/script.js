@@ -1,3 +1,5 @@
+
+// 
 document.querySelectorAll("[data-carousel]").forEach(carousel => {
   const images = carousel.querySelector(".carousel-images");
   const total = images.children.length;
@@ -20,9 +22,18 @@ document.querySelectorAll("[data-carousel]").forEach(carousel => {
     updateCarousel();
   });
 });
+// 
 const menuToggle = document.getElementById('menuToggle');
 const navMenu = document.getElementById('navMenu');
 
 menuToggle.addEventListener('click', () => {
   navMenu.classList.toggle('active');
 });
+//
+fetch('./public/imoveis.json')
+  .then(res => res.json())
+  .then(imoveis => {
+    console.log(imoveis);
+  })
+  .catch(err => console.error('Erro ao carregar o JSON:', err));
+console.log(imoveis);
