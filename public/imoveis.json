@@ -3,7 +3,7 @@
         {
         "id": 1,
         "tipo": "Apartamento",
-        "endereco": "Rua das Flores, 123",
+        "bairro": "Guilhermina",
         "cidade": "Praia Grande",
         "estado": "SP",
         "finalidade": "Venda",
@@ -13,8 +13,8 @@
         {
         "id": 2,
         "tipo": "Casa",
-        "endereco": "Avenida Central, 456",
-        "cidade": "Rio de Janeiro",
+        "bairro": "Canto do Forte",
+        "cidade": "Praia Grande",
         "estado": "RJ",
         "finalidade": "Venda",
         "preco": 550000,
@@ -23,8 +23,8 @@
         {
         "id": 3,
         "tipo": "Casa",
-        "endereco": "Rua do Sol, 789",
-        "cidade": "Belo Horizonte",
+        "bairro": "boqueirão",
+        "cidade": "São Vicente",
         "estado": "MG",
         "finalidade": "Venda",
         "preco": 750000,

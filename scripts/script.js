@@ -30,10 +30,4 @@ menuToggle.addEventListener('click', () => {
   navMenu.classList.toggle('active');
 });
 //
-fetch('./public/imoveis.json')
-  .then(res => res.json())
-  .then(imoveis => {
-    console.log(imoveis);
-  })
-  .catch(err => console.error('Erro ao carregar o JSON:', err));
-console.log(imoveis);
+

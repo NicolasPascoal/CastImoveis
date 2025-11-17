@@ -11,3 +11,4 @@
 - { }favoritos ( bem mais pra frente)
 - {X}na home colocar localização da "imobiliaria", caso tenha algum endereço
 - { }criar as politicas e termos de uso
+- { } colocar todos os bairros.
