@@ -30,4 +30,8 @@ menuToggle.addEventListener('click', () => {
   navMenu.classList.toggle('active');
 });
 //
+function verDetalhes(id) {
+    window.location.href = `imovelDetalhado.html?id=${id}`;
+}
+
 

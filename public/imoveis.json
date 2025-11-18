@@ -7,8 +7,17 @@
         "cidade": "Praia Grande",
         "estado": "SP",
         "finalidade": "Venda",
-        "preco": 350000,
-        "descricao": "Apartamento aconchegante com 2 quartos e varanda."
+        "preco": 490000,
+        "descricao": "Apartamento aconchegante com 1 suite e 1 quarto, 1 vaga de garagem e 2 banheiros",
+        "fotos":[
+            "imgs/aptos/apto01/02.jpeg",
+            "imgs/aptos/apto01/03.jpeg",
+            "imgs/aptos/apto01/04.jpeg",
+            "imgs/aptos/apto01/05.jpeg",
+            "imgs/aptos/apto01/06.jpeg",
+            "imgs/aptos/apto01/07.jpeg",
+            "imgs/aptos/apto01/08.jpeg"
+        ]
         },
         {
         "id": 2,
