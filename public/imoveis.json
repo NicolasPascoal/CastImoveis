@@ -16,28 +16,92 @@
             "imgs/aptos/apto01/05.jpeg",
             "imgs/aptos/apto01/06.jpeg",
             "imgs/aptos/apto01/07.jpeg",
-            "imgs/aptos/apto01/08.jpeg"
-        ]
+            "imgs/aptos/apto01/08.jpeg",
+            "imgs/aptos/apto01/09.jpeg",
+            "imgs/aptos/apto01/10.jpeg",
+            "imgs/aptos/apto01/11.jpeg",
+            "imgs/aptos/apto01/12.jpeg",
+            "imgs/aptos/apto01/13.jpeg",
+            "imgs/aptos/apto01/14.jpeg",
+            "imgs/aptos/apto01/15.jpeg"
+        ],
+        "quartos": 1,
+        "suites": 1,
+        "vagas": 1,
+        "banheiros": 2,
+        "area": "62m²"
         },
         {
         "id": 2,
         "tipo": "Casa",
         "bairro": "Canto do Forte",
         "cidade": "Praia Grande",
-        "estado": "RJ",
-        "finalidade": "Venda",
+        "estado": "SP",
+        "finalidade": "aluguel",
         "preco": 550000,
-        "descricao": "Casa espaçosa com 3 quartos e jardim."
+        "descricao": "Casa espaçosa com 3 quartos e jardim.",
+        "fotos":[
+            "imgs/aptos/apto01/03.jpeg",
+            "imgs/aptos/apto01/02.jpeg",
+            "imgs/aptos/apto01/04.jpeg",
+            "imgs/aptos/apto01/05.jpeg",
+            "imgs/aptos/apto01/06.jpeg",
+            "imgs/aptos/apto01/07.jpeg",
+            "imgs/aptos/apto01/08.jpeg"
+        ],
+         "quartos": 2,
+        "suites": 0,
+        "vagas": 2,
+        "banheiros": 1,
+        "area": "54m²"
         },
         {
         "id": 3,
-        "tipo": "Casa",
-        "bairro": "boqueirão",
+        "tipo": "Apartamento",
+        "bairro": "parque bitaru",
         "cidade": "São Vicente",
-        "estado": "MG",
+        "estado": "SP",
         "finalidade": "Venda",
-        "preco": 750000,
-        "descricao": "Cobertura luxuosa com vista panorâmica da cidade."
+        "preco": 460000,
+        "descricao": "Cobertura luxuosa com vista panorâmica da cidade.",
+        "fotos":[
+            "imgs/aptos/apto01/05.jpeg",
+            "imgs/aptos/apto01/02.jpeg",
+            "imgs/aptos/apto01/03.jpeg",
+            "imgs/aptos/apto01/04.jpeg",
+            "imgs/aptos/apto01/06.jpeg",
+            "imgs/aptos/apto01/07.jpeg",
+            "imgs/aptos/apto01/08.jpeg"
+        ],
+        "quartos": 2,
+        "suites": 0,
+        "vagas": 2,
+        "banheiros": 1,
+        "area": "55m²"
+        },
+        {
+            "id": 4,
+            "tipo": "Apartamento",
+            "bairro": "parque bitaru",
+            "cidade": "São Vicente",
+            "estado": "SP",
+            "finalidade": "Venda",
+            "preco": 420000,
+            "descricao": "Cobertura luxuosa com vista panorâmica da cidade.",
+            "fotos":[
+                "imgs/aptos/apto01/06.jpeg",
+                "imgs/aptos/apto01/05.jpeg",
+                "imgs/aptos/apto01/02.jpeg",
+                "imgs/aptos/apto01/03.jpeg",
+                "imgs/aptos/apto01/04.jpeg",
+                "imgs/aptos/apto01/07.jpeg",
+                "imgs/aptos/apto01/08.jpeg"
+            ],
+            "quartos": 2,
+            "suites": 0,
+            "vagas": 2,
+            "banheiros": 1,
+            "area": "55m²"
         }
     ]
 }

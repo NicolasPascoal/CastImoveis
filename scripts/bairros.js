@@ -10,7 +10,14 @@ fetch("./public/bairros.json")
       bairrosSelect.innerHTML = '<option value="">Selecione um bairro</option>';
 
       if (data[cidade]) {
-        data[cidade].forEach(b => {
+
+        // 👉 ordenar alfabeticamente ignorando acentos
+        const bairrosOrdenados = [...data[cidade]].sort((a, b) =>
+          a.localeCompare(b, "pt-BR", { sensitivity: "base" })
+        );
+
+        // preencher o select
+        bairrosOrdenados.forEach(b => {
           bairrosSelect.innerHTML += `<option value="${b}">${b}</option>`;
         });
       }

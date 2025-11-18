@@ -4,7 +4,7 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<title>Castilho Imóveis</title>
-		<link rel="stylesheet" href="styles/comprar.css">
+		<link rel="stylesheet" href="styles/imoveis.css">
 		<link rel="stylesheet" href="styles/global.css">
 		<link rel="stylesheet" href="styles/mobile.css">
 		<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
@@ -28,72 +28,68 @@
 				<button class="menu-toggle" id="menuToggle">☰</button>
 			</div>
 		</header>
-                <section id="imoveis" class="listings container">
-				<h2>Imóveis disponíveis para compra</h2>
-				<div class="grid">
-					<article class="card">
-						<div class="card-image carousel" data-carousel>
-							<div class="carousel-images">
-								<img src="imgs/aptos/apto01/19.jpeg" alt="">
-								<img src="imgs/aptos/apto01/13.jpeg" alt="">
-								<img src="imgs/aptos/apto01/10.jpeg" alt="">
-								<img src="imgs/aptos/apto01/32.jpeg" alt="">
-							</div>
-							<button class="prev">&#10094;</button>
-							<button class="next">&#10095;</button>
-							</div>
-						<div class="card-body">
-							<h3></h3>
-							<p class="price">R$ 490.000,00</p>
-							<p class="meta">1 suíte • 1 quarto • 2 banheiros • 1 vaga de garagem • 63 m²</p>
-							<a class="btn btn-sm" href="#">Ver detalhes</a>
-						</div>
-					</article>
-					<article class="card">
-						<div class="card-image carousel" data-carousel>
-							<div class="carousel-images">
-								<img src="imgs/aptos/apto01/19.jpeg" alt="">
-								<img src="imgs/aptos/apto01/13.jpeg" alt="">
-								<img src="imgs/aptos/apto01/10.jpeg" alt="">
-								<img src="imgs/aptos/apto01/32.jpeg" alt="">
-							</div>
-							<button class="prev">&#10094;</button>
-							<button class="next">&#10095;</button>
-							</div>
-						<div class="card-body">
-							<h3>teste 01</h3>
-							<p class="price">R$ 780.000</p>
-							<p class="meta">3 quartos • 2 banheiros • 120 m²</p>
-							<a class="btn btn-sm" href="#">Ver detalhes</a>
-						</div>
-					</article>
-					<article class="card">
-						<div class="card-image carousel" data-carousel>
-							<div class="carousel-images">
-								<img src="imgs/aptos/apto01/19.jpeg" alt="">
-								<img src="imgs/aptos/apto01/13.jpeg" alt="">
-								<img src="imgs/aptos/apto01/10.jpeg" alt="">
-								<img src="imgs/aptos/apto01/32.jpeg" alt="">
-							</div>
-							<button class="prev">&#10094;</button>
-							<button class="next">&#10095;</button>
-							</div>
-						<div class="card-body">
-							<h3>teste 02</h3>
-							<p class="price">R$ 780.000</p>
-							<p class="meta">3 quartos • 2 banheiros • 120 m²</p>
-							<a class="btn btn-sm" href="#">Ver detalhes</a>
-						</div>
-					</article>	
-				</div>
+			<section class="search-section">
+    <div class="search-card container">
+        <h2>Encontre seu imóvel ideal</h2>
+
+        <form class="search-form" aria-label="Busca de imóveis">
+            <label>Localidade
+                <select name="Localidade" id="Localidade">
+                    <option value="baxd">Baixada Santista</option>
+                    <option value="snts">Santos/SP</option>
+                    <option value="pg">Praia Grande/SP</option>	
+                    <option value="sv">São Vicente/SP</option>
+                </select>
+            </label>
+
+            <label>Bairro
+                <select name="Bairro" id="bairro">
+                    <option value=""></option>
+                </select>
+            </label>
+
+            <label>Finalidade
+                <select name="finalidade" id="finalidade">
+                    <option value="compra">Comprar</option>
+                </select>
+            </label>
+
+            <label>Tipo
+                <select name="tipo" id="tipo">
+                    <option value="tds">Todos</option>
+                    <option value="casa">Casa</option>
+                    <option value="apto">Apartamento</option>
+                    <option value="terreno">Terreno</option>
+                </select>
+            </label>
+
+            <label>Faixa de preço
+                <select name="preco" id="preco">
+                    <option value="indif">Indiferente</option>
+                    <option value="ateTrezen">Até R$ 300.000</option>
+                    <option value="ateOitocen">R$ 300.000 - R$ 800.000</option>
+                    <option value="acimaOitocen">Acima de R$ 800.000</option>
+                </select>
+            </label>
+
+            <button class="btn btn-search">Buscar</button>
+        </form>
+    </div>
+</section>
 
 
-chora ptzada
+<!-- imoveis -->
+<section id="imoveis" class="listings container">
+    <h2>Imóveis disponíveis</h2>
+
+    <div class="grid" id="listaImoveis"></div>
+</section>
         <footer class="site-footer">
                 <div class="container footer-inner">
                     <div>
-                        <strong>Castilho Imóveis</strong>
-                        <p>(11) 93768-5205 • castilhoImoveis@gmail.com</p>
+                        <strong>Bravo Imóveis</strong>
+                        <p>(11) 93768-5205 • bravoimoveis@gmail.com</p>
+						<p>2025 castilhoImoveis • Todos os direitos reservados.</p>
                     </div>
                     <div class="footer-links">
                         <a href="#">Política de Privacidade</a>
@@ -102,5 +98,7 @@ chora ptzada
                 </div>
             </footer>
 		<script src="scripts/script.js"></script>
+		<script src="scripts/bairros.js"></script>
+		<script src="scripts/filtro.js"></script>
 	</body>
 </html>

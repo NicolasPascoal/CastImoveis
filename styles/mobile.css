@@ -47,3 +47,35 @@
     display: flex;
   }
 }
+@media (max-width: 768px) {
+  .search-form {
+    grid-template-columns: 1fr;
+  }
+
+  .grid {
+    gap: 28px;
+  }
+
+  .card-body {
+    padding: 14px;
+  }
+}
+@media (max-width: 880px) {
+  .detalhe-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .foto-principal {
+    height: 300px;
+  }
+
+  .icons-info {
+    gap: 20px;
+  }
+
+  .miniaturas img {
+    height: 80px;
+  }
+}

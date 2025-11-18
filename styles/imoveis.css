@@ -1,98 +1,154 @@
-.search-form {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-  gap: 20px;
-  justify-items: center;
-}
+/* ===========================
+   SEÇÃO DE BUSCA
+=========================== */
 
-.search-form label {
-  display: block;
-  color: var(--muted);
-  font-size: 13px;
-  margin-bottom: 8px;
-}
-
-.search-form input,
-  .search-form select {
-    width: 100%;
-    padding: 10px;
-    border-radius: 8px;
-    border: 1px solid rgba(255, 255, 255, 0.04);
-    background: transparent;
-    color: var(--muted);
-    margin-top: 6px;
-}
 .search-section {
-  display: flex;
-  justify-content: center;
-  align-items: flex-start; 
-  min-height: 60vh;
-  padding-top: 80px; 
-  background: var(--bg);
+  padding: 40px 0;
 }
 
 .search-card {
   background: var(--panel);
-  border: 1px solid var(--accent-weak);
   border-radius: 12px;
-  padding: 36px 48px;
-  box-shadow: 0 0 20px rgba(0,0,0,0.4);
-  text-align: center;
+  padding: 24px;
+  border: 1px solid rgba(255, 255, 255, 0.04);
 }
 
 .search-card h2 {
   color: var(--gold);
-  font-weight: 600;
-  margin-bottom: 24px;
+  margin-bottom: 20px;
+  font-size: 22px;
 }
 
+/* grid da busca */
 .search-form {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
   gap: 20px;
-  justify-items: center;
 }
 
 .search-form label {
   display: flex;
   flex-direction: column;
-  font-size: 0.9rem;
+  font-size: 14px;
   color: var(--muted);
-  width: 100%;
 }
 
 .search-form select {
   margin-top: 6px;
   padding: 10px;
-  border-radius: 6px;
-  border: 1px solid rgba(212, 175, 55, 0.15);
-  background: #111;
+  border-radius: 8px;
+  background: transparent;
   color: var(--muted);
-  font-size: 1rem;
-}
-
-.search-form select:focus {
-  outline: none;
-  border-color: var(--gold);
+  border: 1px solid rgba(255, 255, 255, 0.06);
 }
 
 .btn-search {
-  grid-column: 1 / -1;
-  display: flex;
-  justify-content: center;
-  align-items: center;    
-  margin-top: 20px;
+  margin-top: 28px;
+  padding: 10px;
   background: var(--gold);
   color: #000;
-  font-weight: 600;
-  border: none;
-  padding: 12px 28px;
   border-radius: 8px;
+  border: none;
+  font-weight: 600;
   cursor: pointer;
-  transition: 0.2s ease-in-out;
+  transition: .3s;
 }
 
 .btn-search:hover {
-  background: var(--gold-dark);
-  transform: scale(1.05);
+  opacity: .8;
 }
+
+
+/* ===========================
+   LISTAGEM DE IMÓVEIS
+=========================== */
+
+.listings {
+  padding: 48px 0;
+}
+
+.listings h2 {
+  color: var(--gold);
+  margin-bottom: 20px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
+  gap: 36px;
+}
+
+/* Card */
+.card {
+  background: var(--panel);
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid rgba(255,255,255,0.04);
+  display: flex;
+  flex-direction: column;
+  transition: .3s;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(212,175,55,0.2);
+}
+
+/* imagem */
+.card-image {
+  aspect-ratio: 4 / 3;
+  background: linear-gradient(135deg, #111, #1b1b1b);
+  overflow: hidden;
+  position: relative;
+}
+
+.card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* corpo */
+.card-body {
+  padding: 16px;
+}
+
+.card-body h3 {
+  font-size: 16px;
+  color: #fff;
+  margin-bottom: 8px;
+}
+
+.price {
+  color: var(--gold);
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+
+.meta {
+  color: var(--muted);
+  font-size: 13px;
+  margin-bottom: 16px;
+}
+
+.card-body .btn-sm {
+  display: inline-block;
+  padding: 8px 12px;
+  border-radius: 6px;
+  background: var(--gold);
+  color: #000;
+  font-weight: 600;
+  text-decoration: none;
+  transition: .3s;
+}
+
+.card-body .btn-sm:hover {
+  opacity: .8;
+}
+
+
+/* ===========================
+   RESPONSIVIDADE
+=========================== */
+
+

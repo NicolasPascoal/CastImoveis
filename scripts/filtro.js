@@ -28,12 +28,8 @@ document.querySelector('.search-form').addEventListener('submit', async (e) => {
   } else if (faixaPreco === 'acimaOitocen') filtros.precoMin = 800000;
 
   if (bairro) filtros.bairro = bairro;
-
-
-
-
-
   const imoveisFiltrados = await carregarImoveis(filtros);
+  displayImoveis(imoveisFiltrados);
 
   console.log('Resultado final:', imoveisFiltrados);
 });
@@ -66,3 +62,51 @@ fetch('./public/imoveis.json')
     console.log(imoveis);
   })
   .catch(err => console.error('Erro ao carregar o JSON:', err));
+
+
+  // 
+ function displayImoveis(lista) {
+  const container = document.getElementById('listaImoveis');
+  container.innerHTML = "";
+
+  if (!lista.length) {
+    container.innerHTML = "<p>Nenhum imóvel encontrado.</p>";
+    return;
+  }
+
+  lista.forEach(imovel => {
+
+    const primeiraFoto = imovel.fotos?.[0] || "imgs/sem-foto.jpg";
+    const card = document.createElement('article');
+    card.classList.add('card');
+
+    card.innerHTML = `
+      <div class="card-image carousel" data-carousel>
+        <div class="carousel-images">
+          ${imovel.fotos?.map(f => `
+            <img src="${f}" alt="Foto do imóvel">
+          `).join('')}
+        </div>
+        <button class="prev">&#10094;</button>
+        <button class="next">&#10095;</button>
+      </div>
+
+      <div class="card-body">
+        <h3>${imovel.tipo} - ${imovel.bairro}</h3>
+        <p class="price">R$ ${imovel.preco.toLocaleString('pt-BR')}</p>
+
+        <p class="meta">
+          ${imovel.descricao || ""}
+        </p>
+
+        <a class="btn btn-sm" href="#" onclick="verDetalhes(${imovel.id})">
+          Ver detalhes
+        </a>
+      </div>
+    `;
+
+    container.appendChild(card);
+  });
+
+  iniciarCarrosseis(); // ativa o carrossel
+}

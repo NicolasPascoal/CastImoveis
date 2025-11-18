@@ -45,13 +45,9 @@
 
     <!-- GRID PRINCIPAL -->
     <div class="detalhe-grid">
-
-        <!-- 📸 GALERIA -->
         <div class="galeria-container">
 
             <div id="galeria-preview" class="galeria-preview"></div>
-
-            <!-- MODAL -->
             <div id="modal" class="modal">
                 <span class="close" onclick="closeModal()">&times;</span>
 
@@ -64,7 +60,6 @@
                 </div>
             </div>
 
-            <!-- TEXTO DO IMÓVEL -->
             <div class="info-basica">
                 <h2 id="titulo"></h2>
                 <p id="localizacao"></p>
@@ -76,13 +71,12 @@
             <p id="descricao"></p>
 
         </div>
-
-        <!-- 📄 FORMULÁRIO (SEPARADO!) -->
         <aside class="form-container">
             <h2>Comprar</h2>
             <span id="preco" class="preco"></span>
 
             <form>
+                <input type="hidden" id="id-imovel" name="id_imovel" value="">
                 <label>Nome:</label>
                 <input type="text" placeholder="Digite seu nome">
 
@@ -93,12 +87,13 @@
                 <input type="email" placeholder="Digite seu e-mail">
 
                 <label>Mensagem:</label>
-                <textarea rows="5">Olá, vi o anúncio do imóvel e gostaria de mais informações.</textarea>
+                <textarea rows="5" id="mensagem">Olá, vi o anúncio do imóvel e gostaria de mais informações.</textarea>
 
                 <button class="btn-send">Enviar</button>
             </form>
 
             <a id="whatsappBtn" class="btn-whats" target="_blank">💬 WhatsApp</a>
+            <p>Ao enviar voce concorda com os Termos de uso e políticas de privacidade</p>
         </aside>
 
     </div>
@@ -107,8 +102,9 @@
 <footer class="site-footer">
     <div class="container footer-inner">
         <div>
-            <strong>Castilho Imóveis</strong>
-            <p>(11) 93768-5205 • castilhoImoveis@gmail.com</p>
+            <strong>Bravo Imóveis</strong>
+            <p>(11) 93768-5205 • bravoimoveis@gmail.com</p>
+            <p>2025 castilhoImoveis • Todos os direitos reservados.</p>
         </div>
         <div class="footer-links">
             <a href="#">Política de Privacidade</a>
@@ -118,6 +114,7 @@
 </footer>
 
 <script src="scripts/detalhado.js"></script>
+<script src="scripts/script.js"></script>
 
 </body>
 </html>

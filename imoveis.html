@@ -1,105 +1,115 @@
 <!doctype html>
 <html lang="pt-BR">
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<title>Castilho Imóveis</title>
-		<link rel="stylesheet" href="styles/imoveis.css">
-		<link rel="stylesheet" href="styles/global.css">
-		<link rel="stylesheet" href="styles/mobile.css">
-		<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
-	</head>
-	<body>
-		<header class="site-header">
-			<div class="container header-inner">
-				<div class="brand">
-					<img src="imgs/Logo.jpeg" alt="">
-					<div class="brand-text">
-						<strong>Bravo</strong>
-						<span>Imóveis</span>
-					</div>
-				</div>
-				<nav class="nav" id="navMenu">
-					<a href="index.html">Início</a>
-					<a href="imoveis.html">Imóveis</a>
-					<a href="sobre.html">Sobre</a>
-					<a href="#" class="btn-outline">Contato</a>
-				</nav>
-				<button class="menu-toggle" id="menuToggle">☰</button>
-			</div>
-		</header>
-                <section class="search-section">
-  <div class="search-card container">
-    <h2>Encontre seu imóvel ideal</h2>
-    <form class="search-form" aria-label="Busca de imóveis">
-      <label>Localidade
-        <select name="Localidade" id="Localidade">
-          <option value="baxd">Baixada Santista</option>
-          <option value="snts">Santos/SP</option>
-          <option value="pg">Praia Grande/SP</option>
-          <option value="sv">São Vicente/SP</option>
-        </select>
-      </label>
-      <label>Bairro
-        <select name="Bairro" id="bairro">
-          <option value=""></option>
-        </select>
-      </label>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Castilho Imóveis</title>
+    <link rel="stylesheet" href="styles/imoveis.css">
+    <link rel="stylesheet" href="styles/global.css">
+    <link rel="stylesheet" href="styles/mobile.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
 
-      <label>Finalidade
-        <select name="finalidade" id="finalidade">
-          <option value="null">Selecione</option>
-          <option value="compra">Comprar</option>
-          <option value="aluguel">Alugar</option>
-        </select>
-      </label>
+<body>
+<header class="site-header">
+    <div class="container header-inner">
+        <div class="brand">
+            <img src="imgs/Logo.jpeg" alt="">
+            <div class="brand-text">
+                <strong>Bravo</strong>
+                <span>Imóveis</span>
+            </div>
+        </div>
 
-      <label>Tipo
-        <select name="tipo" id="tipo">
-          <option value="tds">Todos</option>
-          <option value="casa">Casa</option>
-          <option value="apto">Apartamento</option>
-          <option value="terreno">Terreno</option>
-        </select>
-      </label>
+        <nav class="nav" id="navMenu">
+            <a href="index.html">Início</a>
+            <a href="imoveis.html">Imóveis</a>
+            <a href="sobre.html">Sobre</a>
+            <a href="#" class="btn-outline">Contato</a>
+        </nav>
 
-      <label>Faixa de preço
-        <select name="preco" id="preco">
-          <option value="indif">Indiferente</option>
-          <option value="ateTrezen">Até R$ 300.000</option>
-          <option value="ateOitocen">R$ 300.000 - R$ 800.000</option>
-          <option value="acimaOitocen">Acima de R$ 800.000</option>
-        </select>
-      </label>
-	  <label>teste
-        <select name="preco" id="preco">
-          <option value="indif">Indiferente</option>
-          <option value="ateTrezen">Até R$ 300.000</option>
-          <option value="ateOitocen">R$ 300.000 - R$ 800.000</option>
-          <option value="acimaOitocen">Acima de R$ 800.000</option>
-        </select>
-      </label>
+        <button class="menu-toggle" id="menuToggle">☰</button>
+    </div>
+</header>
 
-      <button class="btn btn-search">Buscar</button>
-    </form>
-  </div>
+
+<!-- 🔍 SEÇÃO DE BUSCA -->
+<section class="search-section">
+    <div class="search-card container">
+        <h2>Encontre seu imóvel ideal</h2>
+
+        <form class="search-form" aria-label="Busca de imóveis">
+            <label>Localidade
+                <select name="Localidade" id="Localidade">
+                    <option value="baxd">Baixada Santista</option>
+                    <option value="snts">Santos/SP</option>
+                    <option value="pg">Praia Grande/SP</option>
+                    <option value="sv">São Vicente/SP</option>
+                </select>
+            </label>
+
+            <label>Bairro
+                <select name="Bairro" id="bairro">
+                    <option value=""></option>
+                </select>
+            </label>
+
+            <label>Finalidade
+                <select name="finalidade" id="finalidade">
+                    <option value="null">Selecione</option>
+                    <option value="compra">Comprar</option>
+                    <option value="aluguel">Alugar</option>
+                </select>
+            </label>
+
+            <label>Tipo
+                <select name="tipo" id="tipo">
+                    <option value="tds">Todos</option>
+                    <option value="casa">Casa</option>
+                    <option value="apto">Apartamento</option>
+                    <option value="terreno">Terreno</option>
+                </select>
+            </label>
+
+            <label>Faixa de preço
+                <select name="preco" id="preco">
+                    <option value="indif">Indiferente</option>
+                    <option value="ateTrezen">Até R$ 300.000</option>
+                    <option value="ateOitocen">R$ 300.000 - R$ 800.000</option>
+                    <option value="acimaOitocen">Acima de R$ 800.000</option>
+                </select>
+            </label>
+
+            <button class="btn btn-search">Buscar</button>
+        </form>
+    </div>
 </section>
 
 
-        <footer class="site-footer">
-                <div class="container footer-inner">
-                    <div>
-                        <strong>Castilho Imóveis</strong>
-                        <p>(11) 93768-5205 • castilhoImoveis@gmail.com</p>
-                    </div>
-                    <div class="footer-links">
-                        <a href="#">Política de Privacidade</a>
-                        <a href="#">Termos</a>
-                    </div>
-                </div>
-            </footer>
-		<script src="scripts/script.js"></script>
-    <script src="scripts/bairros.js"></script>
-    <script src="scripts/filtro.js"></script>
-	</body>
+<section id="imoveis" class="listings container">
+    <h2>Imóveis disponíveis</h2>
+
+    <div class="grid" id="listaImoveis"></div>
+</section>
+
+
+<footer class="site-footer">
+    <div class="container footer-inner">
+        <div>
+            <strong>Bravo Imóveis</strong>
+            <p>(11) 93768-5205 • bravoimoveis@gmail.com</p>
+            <p>2025 castilhoImoveis • Todos os direitos reservados.</p>
+        </div>
+        <div class="footer-links">
+            <a href="#">Política de Privacidade</a>
+            <a href="#">Termos</a>
+        </div>
+    </div>
+</footer>
+
+<script src="scripts/script.js"></script>
+<script src="scripts/bairros.js"></script>
+<script src="scripts/filtro.js"></script>
+
+</body>
 </html>

@@ -10,13 +10,16 @@ async function carregarImovel() {
     const json = await req.json();
 
     const imovel = json.imoveis.find(x => x.id === id);
+    document.getElementById("id-imovel").value = id;
+    document.getElementById("mensagem").value =
+    `Olá! Vi o anúncio do imóvel #${id} e gostaria de mais informações.`;
+
 
     if (!imovel) {
         alert("Imóvel não encontrado!");
         return;
     }
 
-    // Preenche informações textuais
     document.getElementById("titulo").innerText = imovel.tipo;
     document.getElementById("localizacao").innerText =
         `${imovel.bairro}, ${imovel.cidade} - ${imovel.estado}`;
@@ -26,14 +29,10 @@ async function carregarImovel() {
             style: 'currency',
             currency: 'BRL'
         });
-
-    // Define imagens
     imagens = imovel.fotos;
 
     carregarPreview();
 }
-
-// 2. Monta preview com limite 4 imagens
 function carregarPreview() {
     const preview = document.getElementById("galeria-preview");
     preview.innerHTML = "";
@@ -44,8 +43,6 @@ function carregarPreview() {
         img.onclick = () => openModal(index);
         preview.appendChild(img);
     });
-
-    // Se tiver mais de 4, cria botão de "ver mais"
     if (imagens.length > 4) {
         const botao = document.createElement("div");
         botao.className = "ver-mais";
@@ -55,7 +52,7 @@ function carregarPreview() {
     }
 }
 
-// 3. Modal
+
 function openModal(index) {
     currentIndex = index;
     document.getElementById("modal-img").src = imagens[currentIndex];
@@ -76,7 +73,7 @@ function prevImg() {
     document.getElementById("modal-img").src = imagens[currentIndex];
 }
 
-// EVENTOS (🔥 isso faz o X funcionar!)
+
 document.addEventListener("DOMContentLoaded", () => {
     carregarImovel();
 
@@ -84,7 +81,7 @@ document.addEventListener("DOMContentLoaded", () => {
     document.getElementById("nextBtn").onclick = nextImg;
     document.getElementById("prevBtn").onclick = prevImg;
 
-    // Fechar clicando fora da imagem
+
     document.getElementById("modal").onclick = e => {
         if (e.target.id === "modal") closeModal();
     };
