@@ -67,18 +67,19 @@
         <aside class="form-container">
             <h2>Comprar</h2>
             <span id="preco" class="preco"></span>
-            <form>
-                <input type="hidden" id="id-imovel" name="id_imovel" value="">
+            <form id="formContato">
+                <input type="hidden" id="id-imovel" name="id" value="">
                 <label>Nome:</label>
-                <input type="text" placeholder="Digite seu nome">
+                <input id="nome" type="text" placeholder="Digite seu nome">
                 <label>Telefone:</label>
-                <input type="text" placeholder="(13) 99114-2867">
+                <input id="telefone" type="text" placeholder="(13) 99114-2867">
                 <label>E-mail:</label>
-                <input type="email" placeholder="Digite seu e-mail">
+                <input id="email" type="email" placeholder="Digite seu e-mail">
                 <label>Mensagem:</label>
                 <textarea rows="5" id="mensagem">Olá, vi o anúncio do imóvel e gostaria de mais informações.</textarea>
-                <button class="btn-send">Enviar</button>
+                <button class="btn-send" type="submit">Enviar</button>
             </form>
+
             <a id="whatsappBtn" class="btn-whats" target="_blank">💬 WhatsApp</a>
             <p>Ao enviar voce concorda com os Termos de uso e políticas de privacidade</p>
         </aside>
@@ -97,6 +98,8 @@
         </div>
     </div>
 </footer>
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+<script src="scripts/contato.js"></script>
 <script src="scripts/detalhado.js"></script>
 <script src="scripts/script.js"></script>
 </body>
