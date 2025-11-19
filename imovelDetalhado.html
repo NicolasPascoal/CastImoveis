@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="styles/mobile.css">
     <link rel="stylesheet" href="styles/imovelDetalhado.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 
 <body>
@@ -37,20 +38,14 @@
     <!-- HERO -->
     <section class="hero-imovel">
         <h1>Viva o conforto e a exclusividade que você merece.</h1>
-        <div class="hero-buttons">
-            <button class="btn-amarelo">Comprar Agora</button>
-            <button class="btn-cinza">Alugar Este Imóvel</button>
-        </div>
     </section>
 
     <!-- GRID PRINCIPAL -->
     <div class="detalhe-grid">
         <div class="galeria-container">
-
             <div id="galeria-preview" class="galeria-preview"></div>
             <div id="modal" class="modal">
                 <span class="close" onclick="closeModal()">&times;</span>
-
                 <div class="modal-content">
                     <img id="modal-img" class="modal-img" src="">
                     <div class="controls">
@@ -59,46 +54,36 @@
                     </div>
                 </div>
             </div>
-
             <div class="info-basica">
                 <h2 id="titulo"></h2>
                 <p id="localizacao"></p>
             </div>
-
             <div class="icons-info" id="icones"></div>
-
             <h3>Descrição</h3>
             <p id="descricao"></p>
-
+            <h3>Comodidades</h3>
+            <div id="comodidades-list" class="comodidades"></div>
         </div>
         <aside class="form-container">
             <h2>Comprar</h2>
             <span id="preco" class="preco"></span>
-
             <form>
                 <input type="hidden" id="id-imovel" name="id_imovel" value="">
                 <label>Nome:</label>
                 <input type="text" placeholder="Digite seu nome">
-
                 <label>Telefone:</label>
                 <input type="text" placeholder="(13) 99114-2867">
-
                 <label>E-mail:</label>
                 <input type="email" placeholder="Digite seu e-mail">
-
                 <label>Mensagem:</label>
                 <textarea rows="5" id="mensagem">Olá, vi o anúncio do imóvel e gostaria de mais informações.</textarea>
-
                 <button class="btn-send">Enviar</button>
             </form>
-
             <a id="whatsappBtn" class="btn-whats" target="_blank">💬 WhatsApp</a>
             <p>Ao enviar voce concorda com os Termos de uso e políticas de privacidade</p>
         </aside>
-
     </div>
 </main>
-
 <footer class="site-footer">
     <div class="container footer-inner">
         <div>
@@ -112,9 +97,7 @@
         </div>
     </div>
 </footer>
-
 <script src="scripts/detalhado.js"></script>
 <script src="scripts/script.js"></script>
-
 </body>
 </html>

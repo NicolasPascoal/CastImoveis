@@ -30,6 +30,35 @@ async function carregarImovel() {
             currency: 'BRL'
         });
     imagens = imovel.fotos;
+    const comodidades = {
+    varanda: "Varanda",
+    piscina: "Piscina",
+    academia: "Academia",
+    salao_festas: "Salão de Festas",
+    playground: "Playground",
+    churrasqueira: "Churrasqueira",
+    portaria_24h: "Portaria 24h",
+    salao_jogos: "Salão de Jogos",
+    bicicletario: "Bicicletário",
+    permuta: "Aceita Permuta",
+    arCondicionado: "Ar-condicionado",
+    elevador: "Elevador"
+};
+
+const container = document.getElementById("comodidades-list");
+container.innerHTML = "";
+
+Object.keys(comodidades).forEach(campo => {
+    if (imovel[campo] === "sim") {
+        const item = document.createElement("div");
+        item.className = "comodidade-item";
+        item.innerHTML = `
+            <i class="fa-solid fa-check"></i>
+            <span>${comodidades[campo]}</span>
+        `;
+        container.appendChild(item);
+    }
+});
 
     carregarPreview();
 }

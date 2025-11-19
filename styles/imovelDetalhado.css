@@ -289,6 +289,29 @@ form textarea {
     border-radius: 8px;
     cursor: pointer;
 }
+ .comodidades {
+    margin-top: 16px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 10px;
+}
+
+.comodidade-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(255,255,255,0.05);
+    padding: 10px;
+    border-radius: 8px;
+    font-size: 14px;
+    color: var(--muted);
+    border: 1px solid rgba(255,255,255,0.06);
+}
+
+.comodidade-item i {
+    color: var(--gold);
+    font-size: 16px;
+}
 
 
 /* ============================

@@ -3,10 +3,20 @@
 - {x}Fazer o arquivo dinamico consumindo um JSON
 - { }Como vou fazer para os aptos ir "automaticamente" (mais pra frente)
 - {X}colocar parte para aptos que esta anunciado para vendas ou aluguel não "Destaques" ate pq não faz sentido 
-- { }Form de contato e compra
 - {x}Cria Base para quando o cliente clicar em "Ver detalhes", para entrar em contato com o vendedor
 - { }ver de colocar imoveis similares(mais pra frente)
 - { }colocar botão de copiar o link p/ compartilhamento
 - { }favoritos ( bem mais pra frente)
-- { }criar as politicas e termos de uso
 - {x} colocar todos os bairros.
+ -----------------------------------
+ pendencias urgentes
+{ } formulario de contato funcional 
+{ } fazer arquivo de contato
+{ } adicionar pela tabela
+{ } filtro especifico
+{ } criar as politicas e termos de uso
+{ } trocar a logo
+{ } fazer que quando clicar na logo volte para a pag inicial
+{ } verificação final
+{ } subir para produção nas hostgator
+{ } definir valor para o trabalho
