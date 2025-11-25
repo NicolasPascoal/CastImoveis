@@ -79,3 +79,20 @@
     height: 80px;
   }
 }
+@media (max-width: 900px) {
+    .comodidades {
+        grid-template-columns: repeat(3, 1fr); /* tablet */
+    }
+}
+
+@media (max-width: 600px) {
+    .comodidades {
+        grid-template-columns: repeat(2, 1fr); /* celular */
+    }
+}
+
+@media (max-width: 400px) {
+    .comodidades {
+        grid-template-columns: 1fr; /* telas muito pequenas */
+    }
+}

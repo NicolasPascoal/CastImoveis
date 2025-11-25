@@ -32,13 +32,13 @@
     </div>
 </header>
 
-
-<!-- 🔍 SEÇÃO DE BUSCA -->
 <section class="search-section">
     <div class="search-card container">
         <h2>Encontre seu imóvel ideal</h2>
+        <p>(não é necessário preencher todos os campos.)</p>
 
         <form class="search-form" aria-label="Busca de imóveis">
+
             <label>Localidade
                 <select name="Localidade" id="Localidade">
                     <option value="baxd">Baixada Santista</option>
@@ -80,10 +80,61 @@
                 </select>
             </label>
 
+            <label>Quartos:
+                <select id="fa_quartos">
+                    <option value="">Indiferente</option>
+                    <option value="1">1+</option>
+                    <option value="2">2+</option>
+                    <option value="3">3+</option>
+                    <option value="4">4+</option>
+                </select>
+            </label>
+
+            <label>Suítes:
+                <select id="fa_suites">
+                    <option value="">Indiferente</option>
+                    <option value="1">1+</option>
+                    <option value="2">2+</option>
+                    <option value="3">3+</option>
+                </select>
+            </label>
+
+            <label>Vagas:
+                <select id="fa_vagas">
+                    <option value="">Indiferente</option>
+                    <option value="1">1+</option>
+                    <option value="2">2+</option>
+                    <option value="3">3+</option>
+                </select>
+            </label>
+
+            <label>Banheiros:
+                <select id="fa_banheiros">
+                    <option value="">Indiferente</option>
+                    <option value="1">1+</option>
+                    <option value="2">2+</option>
+                    <option value="3">3+</option>
+                </select>
+            </label>
+            <div class="comodidades">
+                <label><input type="checkbox" class="fa_com" value="varanda"> Varanda</label>
+                <label><input type="checkbox" class="fa_com" value="piscina"> Piscina</label>
+                <label><input type="checkbox" class="fa_com" value="academia"> Academia</label>
+                <label><input type="checkbox" class="fa_com" value="salao_festas"> Salão de Festas</label>
+                <label><input type="checkbox" class="fa_com" value="playground"> Playground</label>
+                <label><input type="checkbox" class="fa_com" value="churrasqueira"> Churrasqueira</label>
+                <label><input type="checkbox" class="fa_com" value="portaria_24h"> Portaria 24h</label>
+                <label><input type="checkbox" class="fa_com" value="salao_jogos"> Salão de Jogos</label>
+                <label><input type="checkbox" class="fa_com" value="bicicletario"> Bicicletário</label>
+                <label><input type="checkbox" class="fa_com" value="permuta"> Aceita Permuta</label>
+            </div>
+            <div>
             <button class="btn btn-search">Buscar</button>
+            </div>
         </form>
     </div>
 </section>
+
 
 
 <section id="imoveis" class="listings container">

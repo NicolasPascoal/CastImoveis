@@ -43,7 +43,7 @@
         ],
         "quartos": 2,
         "suites": 1,
-        "vagas": 1,
+        "vagas": 3,
         "banheiros": 2,
         "area": "62m²",
         "varanda": "sim",
@@ -169,14 +169,14 @@
             "area": "55m²",
             "varanda": "nao",
             "piscina": "nao",
-            "academia": "sim",
+            "academia": "nao",
             "salao_festas": "nao",
             "playground": "nao",
             "churrasqueira": "nao",
             "portaria_24h": "nao",
             "salao_jogos": "nao",
-            "bicicletario": "sim",
-            "permuta": "sim"
+            "bicicletario": "nao",
+            "permuta": "nao"
         }
     ]
 }

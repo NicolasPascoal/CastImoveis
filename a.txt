@@ -13,10 +13,11 @@
 - { }criar página de aluguel.
  -----------------------------------
  pendencias urgentes
-{ } formulario de contato funcional 
+{X} formulario de contato funcional 
 { } fazer arquivo de contato
+{ } fazer aquivo de aluguel
 { } adicionar pela tabela
-{ } filtro especifico
+{X} filtro especifico
 { } criar as politicas e termos de uso
 { } trocar a logo
 { } fazer que quando clicar na logo volte para a pag inicial

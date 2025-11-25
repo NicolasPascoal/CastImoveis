@@ -6,6 +6,13 @@ document.querySelector('.search-form').addEventListener('submit', async (e) => {
   const tipo = document.getElementById('tipo').value;
   const faixaPreco = document.getElementById('preco').value;
   const bairro = document.getElementById('bairro').value;
+  const quartos = document.getElementById('fa_quartos').value;
+  const suites = document.getElementById('fa_suites').value;
+  const vagas = document.getElementById('fa_vagas').value;
+  const banheiros = document.getElementById('fa_banheiros').value;
+
+  const comodidades = [...document.querySelectorAll('.fa_com:checked')]
+                        .map(c => c.value);
 
   let filtros = {};
 
@@ -18,7 +25,9 @@ document.querySelector('.search-form').addEventListener('submit', async (e) => {
   else if (finalidade === 'aluguel') filtros.finalidade = 'Aluguel';
 
   if (tipo !== 'tds') {
-    filtros.tipo = tipo === 'apto' ? 'Apartamento' : tipo.charAt(0).toUpperCase() + tipo.slice(1);
+    filtros.tipo = tipo === 'apto'
+      ? 'Apartamento'
+      : tipo.charAt(0).toUpperCase() + tipo.slice(1);
   }
 
   if (faixaPreco === 'ateTrezen') filtros.precoMax = 300000;
@@ -28,10 +37,17 @@ document.querySelector('.search-form').addEventListener('submit', async (e) => {
   } else if (faixaPreco === 'acimaOitocen') filtros.precoMin = 800000;
 
   if (bairro) filtros.bairro = bairro;
+  if (quartos) filtros.quartos = Number(quartos);
+  if (suites) filtros.suites = Number(suites);
+  if (vagas) filtros.vagas = Number(vagas);
+  if (banheiros) filtros.banheiros = Number(banheiros);
+  if (comodidades.length > 0) filtros.comodidades = comodidades;
   const imoveisFiltrados = await carregarImoveis(filtros);
-  displayImoveis(imoveisFiltrados);
 
-  console.log('Resultado final:', imoveisFiltrados);
+  console.log('🔍 Filtros aplicados:', filtros);
+  console.log('📦 Resultado final:', imoveisFiltrados);
+
+  displayImoveis(imoveisFiltrados);
 });
 
 async function carregarImoveis(filtros = {}) {
@@ -47,7 +63,15 @@ async function carregarImoveis(filtros = {}) {
     if (filtros.precoMax)     lista = lista.filter(i => i.preco <= filtros.precoMax);
     if (filtros.precoMin)     lista = lista.filter(i => i.preco >= filtros.precoMin);
     if (filtros.bairro)       lista = lista.filter(i => i.bairro.toLowerCase() === filtros.bairro.toLowerCase());
-
+    if (filtros.quartos)      lista = lista.filter(i => i.quartos >= filtros.quartos);
+    if (filtros.banheiros)    lista = lista.filter(i => i.banheiros >= filtros.banheiros);
+    if (filtros.vagas)        lista = lista.filter(i => i.vagas >= filtros.vagas);
+    if (filtros.suites)       lista = lista.filter(i => i.suites >= filtros.suites);
+    if (filtros.comodidades) {
+                              lista = lista.filter(i =>
+                              filtros.comodidades.every(c => i[c] === "sim")
+                              );
+                              }
 
     return lista;
   } catch (erro) {
@@ -62,9 +86,7 @@ fetch('./public/imoveis.json')
     console.log(imoveis);
   })
   .catch(err => console.error('Erro ao carregar o JSON:', err));
-
-
-  // 
+//
  function displayImoveis(lista) {
   const container = document.getElementById('listaImoveis');
   container.innerHTML = "";
@@ -103,7 +125,7 @@ fetch('./public/imoveis.json')
           Ver detalhes
         </a>
       </div>
-    `;
+    `;  
 
     container.appendChild(card);
   });
